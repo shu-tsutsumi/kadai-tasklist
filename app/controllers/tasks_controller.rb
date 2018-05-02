@@ -28,6 +28,7 @@ class TasksController < ApplicationController
   end
   
   def edit
+    @task = current_user.tasks.build(task_params)  # form_for 用
   end
   
   def update
